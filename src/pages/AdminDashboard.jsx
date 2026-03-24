@@ -36,7 +36,7 @@ const AdminDashboard = () => {
     fetchData();
   }, [user, navigate]);
 
-  // console.log(user);
+
 
   const fetchData = async () => {
     setLoading(true);
@@ -56,7 +56,6 @@ const AdminDashboard = () => {
         [];
 
       setBookings(Array.isArray(bookingsData) ? bookingsData : []);
-      // console.log('Booking:', bookingsRes.data);
     } catch (error) {
       console.error('Error fetching admin data', error);
       setEvents([]);
